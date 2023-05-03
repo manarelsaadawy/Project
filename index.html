@@ -1,0 +1,134 @@
+<html>
+<head>
+<title> TAP Cafe | Home </title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+<body bgcolor=black>
+<center><img src="logo.jpg" width="200px" height="200px"></center>
+<center><h1>TAP Cafe Menu</h1></center>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="1.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="2.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="3.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="4.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="5.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="6.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="7.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="8.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="9.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="10.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="11.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="12.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="13.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="14.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="15.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="16.jpg" style="width:100%" height="50%">
+  <img class="mySlides" src="17.jpg" style="width:100%" height="50%">
+</div>
+<hr>
+<center><h2> TAP CAFE Products </h2></center>
+<center><div class="blocks">
+<center><img src="18.jpg" width="100px" height="100px">
+<h4>Coffe</h4>
+<h4>Single</h4>
+<h4>15 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="19.jpg" width="100px" height="100px">
+<h4>Mocha</h4>
+<h4>Single</h4>
+<h4>25 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="20.jpg" width="100px" height="100px">
+<h4>Ice Coffe</h4>
+<h4>Single</h4>
+<h4>30 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="21.jpeg" width="100px" height="100px">
+<h4>Orange Juice</h4>
+<h4>Single</h4>
+<h4>20 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="22.jpg" width="100px" height="100px">
+<h4>Ice Latte</h4>
+<h4>Single</h4>
+<h4>26 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="23.jpg" width="100px" height="100px">
+<h4>Tea</h4>
+<h4>Single</h4>
+<h4>15 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="24.jpg" width="100px" height="100px">
+<h4>Lemon Juice</h4>
+<h4>Single</h4>
+<h4>20 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="25.jpg" width="100px" height="100px">
+<h4>Apple Juice</h4>
+<h4>Single</h4>
+<h4>30 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="26.jpg" width="100px" height="100px">
+<h4>Mango Juice</h4>
+<h4>Single</h4>
+<h4>35 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div>
+<div class="blocks">
+<center><img src="27.jpg" width="100px" height="100px">
+<h4>Green Tea</h4>
+<h4>Single</h4>
+<h4>20 L.E</h4>
+<button class="btn" onClick="buyclc()"> Order Now ! </button></center>
+</div></center>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 3000); 
+}
+
+function buyclc() {
+  let text;
+  let person = prompt("Please enter your number:", "");
+  let x = Math.floor((Math.random() * 10) + 1);
+  if (person == null || person == "") {
+    text = "Request has been cancelled.";
+  } else {
+    text = "Hello, Your phone number " + person + " reserved on Ticket " + x + " please remember it.";
+  }
+  alert(text);
+}
+</script>
+</body>
+</html>
